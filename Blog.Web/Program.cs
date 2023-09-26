@@ -1,3 +1,6 @@
+using Blog.Web.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Blog.Web
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Blog.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<BlogDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("BlogDbConnectionString")));
 
             var app = builder.Build();
 
