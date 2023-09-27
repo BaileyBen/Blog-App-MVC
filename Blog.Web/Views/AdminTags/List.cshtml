@@ -1,0 +1,23 @@
+﻿@model List<Blog.Web.Models.Domain.Tag>
+
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Tags</h1>
+    </div>
+</div>
+
+<div class="container" py-5>
+    @if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead
+        </table>
+    }
+    else
+    {
+        <p>No tags were found!</p>
+    }
+</div>
